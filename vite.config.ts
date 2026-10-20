@@ -14,7 +14,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), viteSingleFile()],
   build: {
     rollupOptions: {
-      input: 'index.source.html', // <--- Указываем новое имя
+      input: 'index.html', // <--- Указываем новое имя
     },
   },
 
