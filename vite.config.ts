@@ -12,6 +12,12 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   base: '/maksim-bogdanovich-poetry-website/', 
   plugins: [react(), tailwindcss(), viteSingleFile()],
+  build: {
+    rollupOptions: {
+      input: 'index.source.html', // <--- Указываем новое имя
+    },
+  },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
